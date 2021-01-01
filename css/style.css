@@ -198,6 +198,9 @@ header button {
     padding: 1.2% 0;
     margin: 1.5% 0;
 }
+header button:hover {
+    background: #8197aa;
+}
 .feature-section {
     margin: 3% auto;
 }
@@ -227,6 +230,27 @@ header button {
 .information-section p{
     margin-left: 2%;
 }
+/* Tablet menu */
+@media all and (min-width: 700px) {
+    .hero {
+        display: inline-block;
+    }
+    h1 {
+        width: 60%;
+    }
+    header input,
+    header button {
+        display: inline;
+        height: 30px;
+    }
+    header input {
+        width: 50%;
+    }
+    header button {
+        width: 20%;
+        padding: 1px;
+    }
+}
 /* Desktop */
 @media all and (min-width: 901px) {
     .page {
@@ -240,6 +264,7 @@ header button {
     header input,
     header button {
         display: inline;
+        height: 30px;
     }
     header input {
         width: 50%;
