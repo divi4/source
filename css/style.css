@@ -1,0 +1,255 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{
+    font-size: 62.5%;
+}
+body {
+    max-width: 960px;
+    margin: auto;
+    background-color: #f5f9fc;
+    font-family: sans-serif;
+    font-size: 1.6rem;
+}
+h1,
+h2,
+h5,
+form,
+p,
+a {
+    margin: 2%;
+    color: #304659;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 4.5rem;
+}
+h5 {
+    font-size: 2rem;
+}
+/******************************************
+/* Navigation
+/*******************************************/
+}
+nav {
+    font-size: 2.4rem;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #8197aa;
+    padding: 3rem 1rem;
+}
+/* How do I responsively center the logo? */
+.dropdown > a {
+    margin-left: 30%;
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+/* Need to replace this with image of hamburger menu */
+.dropdown-btn {
+    background-color: inherit;
+    font-size: 3.2rem;
+    color: #304659;
+    border: none;
+}
+.dropdown-content {
+    display: none;
+}
+.dropdown-content a {
+    padding: 14px 16px;
+    border-bottom: 1px solid #808080;
+}
+.dropdown-content a,
+.dropdown-content button {
+    display: block;
+}
+.dropdown-content a:last-of-type {
+    border-bottom: none;
+    margin-bottom: 5%;
+}
+.dropdown-content button {
+    margin: auto;
+    background-color: #304659;
+    border: none;
+}
+.dropdown-content button a {
+    color: #fff;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.links a:hover {
+    box-shadow: 5px 10px 10px #333;
+}
+
+
+@media (min-width:901px) and (max-width:5000px) {
+    nav {
+        border-bottom: none;
+    }
+    .dropdown > a {
+        margin-left: 0;
+        float: left;
+    }
+    .dropdown-btn {
+        display: none;
+    }
+    .dropdown-content {
+        display: block;
+        text-align: center;
+    }
+    .dropdown-content a,
+    .dropdown-content button {
+        display: inline;
+    }
+    /* Fix up the links to be more centred */
+    .links {
+        padding-top: 3%;
+    }
+    .links a {
+        border-bottom: none;
+        margin: 0;
+    }
+    .dropdown-content button {
+        float: right;
+        position: relative;
+        top: -3rem;
+        padding: 12px 20px;
+    }
+    .dropdown-content a:hover {
+        box-shadow: none;
+        color: #309700;
+    }
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+header p:first-child {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #8197aa;
+    letter-spacing: 0.2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+header img {
+    float: right;
+    margin: 7% 0;
+}
+header input,
+header button {
+    display: block;
+    width: 100%;
+}
+header button {
+    background-color: #304659;
+    color: #fff;
+    border: none;
+    padding: 1.2% 0;
+    margin: 1.5% 0;
+}
+.feature-section {
+    margin: 3% auto;
+}
+.feature-section img {
+    float: left;
+    max-width: 30px;
+}
+.feature-section section {
+    margin: 4rem auto;
+}
+/* Why is link only being affected by the bottom margin not the top? */
+.feature-section section h5,
+.feature-section section p,
+.feature-section section a,
+.information-section p {
+    margin: 1rem 0 1.6rem 3rem;
+}
+.feature-section section a {
+    font-weight: 700;
+}
+/* Make width of info section color go across full-page */
+.information-section {
+    background-color: #fff;
+    padding-top: 5rem;
+}
+.information-section h2,
+.information-section p{
+    margin-left: 2%;
+}
+@media (min-width: 901px) and (max-width: 5000px) {
+    .page {
+        margin: none;
+        float: right;
+    }
+    .hero {
+        display: inline-block;
+        width: 40%;
+    }
+    header input,
+    header button {
+        display: inline;
+    }
+    header input {
+        width: 50%;
+    }
+    header button {
+        width: 30%;
+        padding: 3px;
+    }
+    /* Get a bigger version of the img */
+    .hero-img {
+        display: inline-block;
+        max-width: 150px;
+        float: right;
+        width: 40%;
+    }
+    .feature-section {
+        position: relative;
+        left: -2rem;
+    }
+    .feature-section section {
+        display: inline-block;
+        width: 24%;
+        margin-left: 1rem;
+    }
+    .feature-section section:first-of-type {
+        margin-left: 0;
+    }
+    .feature-section section img {
+        float: none;
+        max-width: 50px;
+        position: relative;
+        left: 2rem;
+    }
+    .information-section h2,
+    .information-section p{
+        width: 50%;
+    }
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
