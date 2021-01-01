@@ -16,6 +16,9 @@
 .clear {
 	clear: both;
 }
+.check {
+    border: 1px solid red;
+}
 
 /******************************************
 /* BASE STYLES
@@ -62,14 +65,20 @@ nav {
     border-bottom: 1px solid #8197aa;
     padding: 3rem 1rem;
 }
-/* How do I responsively center the logo? */
-.dropdown > a {
-    margin-left: 30%;
+.dropdown-toplvl {
+    display: flex;
+}
+.dropdown-toplvl > a {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
     font-size: 3.2rem;
     font-weight: 700;
 }
-/* Need to replace this with image of hamburger menu */
 .dropdown-btn {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 2%;
     background-color: inherit;
     font-size: 3.2rem;
     color: #304659;
@@ -110,8 +119,14 @@ nav {
     nav {
         border-bottom: none;
     }
-    .dropdown > a {
-        margin-left: 0;
+    .dropdown {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-top: 2%;
+    }
+    .dropdown-toplvl > a {
         float: left;
     }
     .dropdown-btn {
@@ -125,19 +140,18 @@ nav {
     .dropdown-content button {
         display: inline;
     }
-    /* Fix up the links to be more centred */
     .links {
-        padding-top: 3%;
+        width: 850px;
     }
     .links a {
         border-bottom: none;
         margin: 0;
     }
     .dropdown-content button {
-        float: right;
+        /* float: right;
         position: relative;
         top: -3rem;
-        padding: 12px 20px;
+        padding: 12px 20px; */
     }
     .dropdown-content a:hover {
         box-shadow: none;
@@ -250,6 +264,3 @@ header button {
         width: 50%;
     }
 }
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
