@@ -1,6 +1,8 @@
 /* Box Model Hack */
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* Clear fix hack */
@@ -57,105 +59,113 @@ h5 {
 /******************************************
 /* Navigation
 /*******************************************/
-}
+/* Basic styling */
 nav {
-    font-size: 2.4rem;
-    overflow: hidden;
-    position: relative;
-    border-bottom: 1px solid #8197aa;
-    padding: 3rem 1rem;
+  font-size: 2.4rem;
+  padding: 0 15px;
+  border-bottom: 1px solid #8197aa;
 }
-.dropdown-toplvl {
-    display: flex;
+a {
+  text-decoration: none;
 }
-.dropdown-toplvl > a {
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
-    font-size: 3.2rem;
-    font-weight: 700;
+.menu {
+  list-style-type: none;
 }
-.dropdown-btn {
-    display: flex;
-    margin-top: 5%;
-    margin-left: 2%;
-    background-color: inherit;
-    font-size: 3.2rem;
-    color: #304659;
-    border: none;
+.logo {
+  font-size: 3.2rem;
+  font-weight: 700;
 }
-.dropdown-content {
-    display: none;
+.item {
+  padding: 10px;
 }
-.dropdown-content a {
-    padding: 14px 16px;
-    border-bottom: 1px solid #808080;
+.item.button {
+  padding: 9px 5px;
 }
-.dropdown-content a,
-.dropdown-content button {
-    display: block;
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: #ccc;
 }
-.dropdown-content a:last-of-type {
-    border-bottom: none;
-    margin-bottom: 5%;
-}
-.dropdown-content button {
-    margin: auto;
-    background-color: #304659;
-    border: none;
-}
-.dropdown-content button a {
+.button a {
     color: #fff;
+    background-color: #304659;
+    border-radius: 15px;
 }
-.dropdown:hover .dropdown-content {
-    display: block;
+.button a:hover {
+    text-decoration: none;
+    background: #8197aa;
 }
-.links a:hover {
-    box-shadow: 5px 10px 10px #333;
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
-
-
-@media (min-width:901px) and (max-width:5000px) {
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+}
+.toggle {
+  order: 1;
+  font-size: 20px;
+}
+.item.button {
+  order: 4;
+}
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.active .item {
+  display: block;
+}
+/* Tablet menu */
+@media all and (min-width: 700px) {
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .item.button {
+        width: auto;
+    }
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+    }
+}
+/* Desktop menu */
+@media all and (min-width:901px) {
     nav {
+        font-size: 2rem;
         border-bottom: none;
     }
-    .dropdown {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-top: 2%;
+    .menu {
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        background: none;
     }
-    .dropdown-toplvl > a {
-        float: left;
+    .logo {
+        order: 0;
     }
-    .dropdown-btn {
+    .item {
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+    }
+    .button {
+        order: 2;
+    }
+    .toggle {
         display: none;
     }
-    .dropdown-content {
-        display: block;
-        text-align: center;
-    }
-    .dropdown-content a,
-    .dropdown-content button {
-        display: inline;
-    }
-    .links {
-        width: 850px;
-    }
-    .links a {
-        border-bottom: none;
-        margin: 0;
-    }
-    .dropdown-content button {
-        /* float: right;
-        position: relative;
-        top: -3rem;
-        padding: 12px 20px; */
-    }
-    .dropdown-content a:hover {
-        box-shadow: none;
-        color: #309700;
+    .item.button a {
+      padding: 9px 50px;
     }
 }
 /******************************************
@@ -214,7 +224,7 @@ header button {
 .information-section p{
     margin-left: 2%;
 }
-@media (min-width: 901px) and (max-width: 5000px) {
+@media all and (min-width: 901px) {
     .page {
         margin: none;
         float: right;
@@ -232,7 +242,7 @@ header button {
     }
     header button {
         width: 30%;
-        padding: 3px;
+        padding: 1px;
     }
     /* Get a bigger version of the img */
     .hero-img {
