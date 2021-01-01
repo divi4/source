@@ -221,6 +221,9 @@ header button:hover {
 .feature-section section a {
     font-weight: 700;
 }
+.feature-section section a:hover {
+    color: #ccc;
+}
 /* Make width of info section color go across full-page */
 .information-section {
     background-color: #fff;
