@@ -137,6 +137,9 @@ a {
         text-align: right;
         order: 2;
     }
+    .item.button a {
+      padding: 9px 50px;
+    }
 }
 /* Desktop menu */
 @media all and (min-width:901px) {
@@ -224,6 +227,7 @@ header button {
 .information-section p{
     margin-left: 2%;
 }
+/* Desktop */
 @media all and (min-width: 901px) {
     .page {
         margin: none;
