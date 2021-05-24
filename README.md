@@ -7,13 +7,12 @@ A mobile-first reponsive design website.
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS
+**Tech used:** HTML, CSS, Javascript
 
 This was built with the purpose of exploring mobile-first responsive design, it's made with HTML and CSS. Floating was used to position elements as a means to gain experience for the future if ever I need to work on older codebases. It also served as practice in making a functional website from a provided psd file. 
 
 ## Planned Features
 
-* Add JavaScript to make the site fully functional
 * Add multiple pages
 
 ## Lessons Learned:
