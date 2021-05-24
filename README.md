@@ -26,7 +26,7 @@ I learnt about how to make a website from a provided psd file, as well as using 
 
 **Restaurant Demo:** https://github.com/divi4/demo-restaurant
 
-**Source (Mobile-first responsive website):** https://github.com/divi4/source
+**Clone Network:** https://github.com/divi4/Team-F3T2
 
 
 
